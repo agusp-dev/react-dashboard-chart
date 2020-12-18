@@ -104,6 +104,7 @@ const ProjectDashboard = ({
       onDragStop={onLayoutChange}
       onResizeStop={onLayoutChange}
       layout={layout}
+      margin={[1, 1]}
       onBreakpointChange={onBreakpointChange}
     >
       <div
