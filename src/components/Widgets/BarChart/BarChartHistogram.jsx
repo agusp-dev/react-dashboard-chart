@@ -2,18 +2,10 @@ import React from 'react'
 import { Bar } from 'react-chartjs-2'
 import cloneDeep from 'lodash/cloneDeep'
 
-const BarChartHistogram = () => {
-
-  const histogramData = {
-    x: ['6.6','6.7','6.8','6.9','7.0','7.1','7.2','7.3'], 
-    y: ['0.1','0.4','0.6','1.4','3.5','4.0','3.0','1.5'], 
-    average_line: { x: '7.0' },
-    xlabel: 'CSS [in]',
-    ylabel: 'N° de Ocurrencias'
-  } 
+const BarChartHistogram = ({ barChartData }) => {
 
   const data = {
-    labels: [...histogramData.x],
+    labels: [...barChartData.x],
     datasets: [
       {
         label: '',
@@ -21,7 +13,7 @@ const BarChartHistogram = () => {
         backgroundColor: 'rgba(178, 204, 234, 0.8)',
         stack: 1,
         hoverBackgroundColor: 'rgba(178, 204, 234)',
-        data: [...histogramData.y],
+        data: [...barChartData.y],
       }, 
       {
         label: 'Promedio',
@@ -33,13 +25,13 @@ const BarChartHistogram = () => {
         borderColor: 'rgba(75,192,192,1)',
         pointRadius: 0,
         borderWidth: 1,
-        data: [...histogramData.y],
+        data: [...barChartData.y],
       }
     ]
   }
 
   const getAverageLine = () => {
-    const { x } = histogramData.average_line
+    const { x } = barChartData.average_line
     return ({
       type: 'line',
       mode: 'vertical',
@@ -73,14 +65,14 @@ const BarChartHistogram = () => {
       },
       scaleLabel: {
         display: true,
-        labelString: histogramData.xlabel
+        labelString: barChartData.xlabel
       }
     }],
     yAxes: [{
       stacked: true,
       scaleLabel: {
         display: true,
-        labelString: histogramData.ylabel
+        labelString: barChartData.ylabel
       }
     }],
     },
