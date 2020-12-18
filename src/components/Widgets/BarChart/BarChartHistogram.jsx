@@ -9,7 +9,7 @@ const BarChartHistogram = ({ barChartData }) => {
     datasets: [
       {
         label: '',
-        fill: true,
+        fill: false,
         backgroundColor: 'rgba(178, 204, 234, 0.8)',
         stack: 1,
         hoverBackgroundColor: 'rgba(178, 204, 234)',
@@ -50,11 +50,12 @@ const BarChartHistogram = ({ barChartData }) => {
     },
     layout: {
       padding: {
-        bottom: 20,
+        bottom: 30,
         top: 20,
-        right: 20,
-        left: 20
-      }
+        left: 20,
+        right: 20
+      },
+      
     },
     scales: {
       
@@ -79,7 +80,7 @@ const BarChartHistogram = ({ barChartData }) => {
     responsive: true,
     legend: {
       display: false,
-      position: 'top',
+      position: 'center',
       labels: {
         fontColor: '#91929b',
         padding: 20

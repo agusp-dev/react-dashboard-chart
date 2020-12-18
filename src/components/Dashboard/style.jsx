@@ -30,7 +30,8 @@ export const useStyles = makeStyles(theme => ({
     padding: '30px 20px 20px 20px',
     borderRadius: '25px',
     backgroundColor: '#fafafa',
-    boxShadow: '0px 6px 12px #00000029'
+    boxShadow: '0px 6px 12px #00000029',
+    overflow: 'auto'
   },
   zoomIn: {
     position: 'absolute',

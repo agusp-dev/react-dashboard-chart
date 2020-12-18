@@ -48,11 +48,11 @@ const ProjectDashboard = ({
           className={ classes.notDraggable }
           data-grid={ o.grid }
         >
-          <ZoomInIcon
+          {/* <ZoomInIcon
             className={classes.zoomIn}
             title={'Show more detail'}
-            // onClick={() => hangleShowChartDetail(object)}
-          />
+            onClick={() => hangleShowChartDetail(object)}
+          /> */}
           { getChart(o.key, o.data) }
         </div>
       )
